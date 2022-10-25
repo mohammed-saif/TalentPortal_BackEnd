@@ -1,0 +1,41 @@
+{
+
+  "Routes": [
+
+    {
+      "UpstreamPathTemplate": "/api/UserSkill",
+      "UpstreamHttpMethod": [ "GET", "POST", "Delete" ],
+
+
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/UserSkill"
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserSkill/userid?userid={id}",
+      "UpstreamHttpMethod": [ "GET" ],
+
+
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8010
+        }
+      ],
+      "DownstreamPathTemplate": "/api/UserSkill/userid?userid={id}"
+    }
+  ],
+  "GlobalConfiguration": {
+
+
+
+  }
+}

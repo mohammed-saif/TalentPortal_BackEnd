@@ -1,0 +1,43 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/skill",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 8001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/skill",
+            "UpstreamHttpMethod": [ "Get", "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/skill/GetSkillSBySkillName?searchText={searchText}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 8001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/skill/GetSkillSBySkillName?searchText={searchText}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/skill?SkillId={skillId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 8001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Skill?SkillId={skillId}",
+            "UpstreamHttpMethod": [ "Delete" ]
+        }
+    ],
+    "GlobalConfiguration": {
+
+    }
+}

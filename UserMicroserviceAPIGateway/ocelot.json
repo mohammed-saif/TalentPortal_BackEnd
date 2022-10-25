@@ -1,0 +1,70 @@
+{
+  "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/User",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/User",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+          "DownstreamPathTemplate": "/api/User/Register",
+          "DownstreamScheme": "http",
+          "DownstreamHostAndPorts": [
+            {
+                "Host": "localhost",
+                "Port": 11005
+            }
+          ],
+          "UpstreamPathTemplate": "/api/User/Register",
+          "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+          "DownstreamPathTemplate": "/api/User/ChangePassword?uid={uid}&password={password}",
+          "DownstreamScheme": "http",
+          "DownstreamHostAndPorts": [
+            {
+                "Host": "localhost",
+                "Port": 11005
+            }
+          ],
+          "UpstreamPathTemplate": "/api/User/ChangePassword?uid={uid}&password={password}",
+          "UpstreamHttpMethod": [ "PUT" ]
+        },
+        {
+          "DownstreamPathTemplate": "/api/User/UserId?uid={uid}",
+          "DownstreamScheme": "http",
+          "DownstreamHostAndPorts": [
+            {
+                "Host": "localhost",
+                "Port": 11005
+            }
+          ],
+          "UpstreamPathTemplate": "/api/User/{uid}",
+          "UpstreamHttpMethod": [ "DELETE", "GET", "PUT" ]
+        },
+        {
+          "DownstreamPathTemplate": "/api/User/Authenticate",
+          "DownstreamScheme": "http",
+          "DownstreamHostAndPorts": [
+            {
+                "Host": "localhost",
+                "Port": 11005
+            }
+          ],
+          "UpstreamPathTemplate": "/api/User/Authenticate",
+          "UpstreamHttpMethod": [ "POST" ]
+        }
+  ],
+  "GlobalConfiguration": {
+
+
+  }
+
+
+}

@@ -1,0 +1,65 @@
+{
+  "Routes": [
+    //JobMicroserviceAPI routing
+    {
+      "UpstreamPathTemplate": "/api/Job",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8002"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Job"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/Job/jobId?jobId={jobId}",
+      "UpstreamHttpMethod": [ "PUT", "DELETE", "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8002"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Job/jobId?jobId={jobId}"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/Job/jobIdList/",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8002"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Job/jobIdList/"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/Job/searchText?searchText={searchText}",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8002"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Job/searchText?searchText={searchText}"
+    }
+
+  ],
+
+  "GlobalConfiguration": {
+
+  }
+}

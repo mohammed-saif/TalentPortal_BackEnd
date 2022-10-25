@@ -1,0 +1,90 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/JobApplicant",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5121
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobApplicant"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/JobApplicant?UserId={id}&JobId={jobid}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5121
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobApplicant?UserId={id}&JobId={jobid}"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/JobApplicant/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5121
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobApplicant/ListUserApplications?userid={id}"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/JobApplicant/UpdateJobAppStatus/{id}&{jobid}&string",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5121
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobApplicant/UpdateJobAppStatus?UserId={id}&JobId={jobid}&newApplicationStatus=string"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/JobApplicant/ApplicationStatus/{id}&{jobid}",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5121
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobApplicant/ApplicationStatus?userid={id}&jobid={jobid}"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/JobApplicant/ListUserApplications/{id}",
+      "UpstreamHttpMethod": ["GET"],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5121
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobApplicant/ListUserApplications?userid={id}"
+    }
+  ],
+  "GlobalConfiguration": {
+
+  }
+}

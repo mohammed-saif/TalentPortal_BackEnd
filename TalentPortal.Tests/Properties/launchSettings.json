@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TalentPortal.Tests": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

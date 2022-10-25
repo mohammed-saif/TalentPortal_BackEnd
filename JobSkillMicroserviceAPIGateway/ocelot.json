@@ -1,0 +1,79 @@
+ {
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/JobSkill",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5098
+        }
+      ],
+      "UpstreamPathTemplate": "/api/JobSkill",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/JobSkill?jobId={jobId}&skillId={skillId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5098
+        }
+      ],
+      "UpstreamPathTemplate": "/api/JobSkill",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/JobSkill?JobId={jobId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5098
+        }
+      ],
+      "UpstreamPathTemplate": "/api/JobSkill?JobId={jobId}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/JobSkill/GetByJobId?jobId={jobId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5098
+        }
+      ],
+      "UpstreamPathTemplate": "/api/JobSkill/GetByJobId?jobId={jobId}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/JobSkill/DeleteSingleSkillByJobId?jobId={jobId}&skillId={skillId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5098
+        }
+      ],
+      "UpstreamPathTemplate": "/api/JobSkill/DeleteSingleSkillByJobId?jobId={jobId}&skillId={skillId}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/JobSkill/UpdatingSkill?jobId={jobId}&skillId1={skillId1}&skillId2={skillId2}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5098
+        }
+      ],
+      "UpstreamPathTemplate": "/api/JobSkill/UpdatingSkill?jobId={jobId}&skillId1={skillId1}&skillId2={skillId2}",
+      "UpstreamHttpMethod": [ "Put" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5098"
+  }
+ }

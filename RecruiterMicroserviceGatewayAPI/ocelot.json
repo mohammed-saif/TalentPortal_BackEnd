@@ -1,0 +1,34 @@
+{   
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/api/Recruiter",
+            "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11003
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Recruiter"
+
+        },
+        {
+            "UpstreamPathTemplate": "/api/Recruiter/Id?UserId={UserId}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11003
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Recruiter/Id?UserId={UserId}"
+
+        }
+    ],
+    "GlobalConfiguration": {
+
+    }
+
+}

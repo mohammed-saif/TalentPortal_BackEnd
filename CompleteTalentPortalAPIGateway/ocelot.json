@@ -1,0 +1,425 @@
+{
+    "Routes": [
+        // Job Applicant API
+        {
+            "UpstreamPathTemplate": "/api/JobApplicant",
+            "UpstreamHttpMethod": [ "GET", "POST" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11000
+                }
+            ],
+            "DownstreamPathTemplate": "/api/JobApplicant"
+        },
+        {
+            "UpstreamPathTemplate": "/api/JobApplicant/ValidatingApplicant?UserId={UserId}&JobId={JobId}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11000
+                }
+            ],
+            "DownstreamPathTemplate": "/api/JobApplicant/ValidatingApplicant?UserId={UserId}&JobId={JobId}"
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/JobApplicant?UserId={id}&JobId={jobid}",
+            "UpstreamHttpMethod": [ "DELETE" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11000
+                }
+            ],
+            "DownstreamPathTemplate": "/api/JobApplicant?UserId={id}&JobId={jobid}"
+        },
+        {
+            "UpstreamPathTemplate": "/api/JobApplicant/ListApplicantsbyJobId?jobid={jobid}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11000
+                }
+            ],
+            "DownstreamPathTemplate": "/api/JobApplicant/ListApplicantsbyJobId?jobid={jobid}"
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/JobApplicant/ListUserApplications?userid={id}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11000
+                }
+            ],
+            "DownstreamPathTemplate": "/api/JobApplicant/ListUserApplications?userid={id}"
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/JobApplicant/UpdateJobAppStatus?UserId={id}&JobId={jobid}&newApplicationStatus={string}",
+            "UpstreamHttpMethod": [ "PUT" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11000
+                }
+            ],
+            "DownstreamPathTemplate": "/api/JobApplicant/UpdateJobAppStatus?UserId={id}&JobId={jobid}&newApplicationStatus={string}"
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/JobApplicant/ApplicationStatus?userid={id}&jobid={jobid}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11000
+                }
+            ],
+            "DownstreamPathTemplate": "/api/JobApplicant/ApplicationStatus?userid={id}&jobid={jobid}"
+        },
+
+        //{
+        //    "UpstreamPathTemplate": "/api/JobApplicant/ListUserApplications/{id}",
+        //    "UpstreamHttpMethod": [ "GET" ],
+
+        //    "DownstreamScheme": "http",
+        //    "DownstreamHostAndPorts": [
+        //        {
+        //            "Host": "localhost",
+        //            "Port": 11000
+        //        }
+        //    ],
+        //    "DownstreamPathTemplate": "/api/JobApplicant/ListUserApplications?userid={id}"
+        //},
+        {
+            "UpstreamPathTemplate": "/api/Job",
+            "UpstreamHttpMethod": [ "GET", "POST" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11001
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Job"
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/Job/jobId?jobId={jobId}",
+            "UpstreamHttpMethod": [ "PUT", "DELETE", "GET" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11001
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Job/jobId?jobId={jobId}"
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/Job/jobIdList/",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11001
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Job/jobIdList/"
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/Job/searchText?searchText={searchText}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11001
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Job/searchText?searchText={searchText}"
+        },
+        {
+            "DownstreamPathTemplate": "/api/User",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/User",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/User/Register",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/User/Register",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/User/ChangePassword?uid={uid}&password={password}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/User/ChangePassword?uid={uid}&password={password}",
+            "UpstreamHttpMethod": [ "PUT" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/User/UserNameCheck?UserName={UserName}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/User/UserNameCheck?UserName={UserName}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/User/UserId?uid={uid}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/User/{uid}",
+            "UpstreamHttpMethod": [ "DELETE", "GET", "PUT" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/User/Authenticate",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/User/Authenticate",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/JobSkill",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/JobSkill",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/JobSkill?jobId={jobId}&skillId={skillId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/JobSkill",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/JobSkill?JobId={jobId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/JobSkill?JobId={jobId}",
+            "UpstreamHttpMethod": [ "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/JobSkill/GetByJobId?jobId={jobId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/JobSkill/GetByJobId?jobId={jobId}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/JobSkill/DeleteSingleSkillByJobId?jobId={jobId}&skillId={skillId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/JobSkill/DeleteSingleSkillByJobId?jobId={jobId}&skillId={skillId}",
+            "UpstreamHttpMethod": [ "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/JobSkill/UpdatingSkill?jobId={jobId}&skillId1={skillId1}&skillId2={skillId2}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/JobSkill/UpdatingSkill?jobId={jobId}&skillId1={skillId1}&skillId2={skillId2}",
+            "UpstreamHttpMethod": [ "Put" ]
+        },
+        {
+            "UpstreamPathTemplate": "/api/Recruiter",
+            "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11003
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Recruiter"
+
+        },
+        {
+            "UpstreamPathTemplate": "/api/Recruiter/Id?UserId={UserId}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11003
+                }
+            ],
+            "DownstreamPathTemplate": "/api/Recruiter/Id?UserId={UserId}"
+
+        },
+        {
+            "UpstreamPathTemplate": "/api/UserSkill",
+            "UpstreamHttpMethod": [ "GET", "POST", "Delete" ],
+
+
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11006
+                }
+            ],
+            "DownstreamPathTemplate": "/api/UserSkill"
+        },
+        {
+            "UpstreamPathTemplate": "/api/UserSkill/userid?userid={id}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+
+
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11006
+                }
+            ],
+            "DownstreamPathTemplate": "/api/UserSkill/userid?userid={id}"
+        },
+        {
+            "DownstreamPathTemplate": "/api/Skill",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11004
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Skill",
+            "UpstreamHttpMethod": [ "GET", "POST" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Skill/Id?SkillId={SkillId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11004
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Skill/Id?SkillId={SkillId}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Skill/GetSkillSBySkillName?searchText={searchText}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11004
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Skill/GetSkillSBySkillName?searchText={searchText}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Skill?SkillId={skillId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 11004
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Skill?SkillId={skillId}",
+            "UpstreamHttpMethod": [ "Delete" ]
+        }
+    ],
+    "GlobalConfiguration": {
+
+    }
+}
+
